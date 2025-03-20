@@ -1,0 +1,94 @@
+% \documentclass[linenumbers, twocolumn]{aastex631}
+\documentclass[trackchanges,linenumbers,twocolumn]{aastex631}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+%\usepackage{csquotes}
+%\usepackage[left=3cm, right=3cm]{geometry}
+\usepackage{CJKutf8}
+\usepackage{graphicx, float, multirow}  % Layout packages
+\usepackage{enumerate, enumitem, hyperref, url, xcolor}     % Formatting packages
+\usepackage{amssymb, amsmath, wasysym, chemformula, chemfig}         % Scientific packages
+\let\tablenum\relax
+\usepackage[group-digits = none]{siunitx}
+\usepackage{booktabs}
+
+%\usepackage{lscape}
+%\usepackage[hang,bf,small]{caption}
+%\captionsetup[table]{font={stretch=1.8}}
+%\captionsetup[figure]{font={stretch=1.5}}
+%\renewcommand{\baselinestretch}{1.5}
+%\renewcommand\theContinuedFloat{\alph{ContinuedFloat}}
+
+% Mathematical shortcuts
+\newcommand{\dblund}[1]{\underline{\underline{#1}}}
+\newcommand{\mf}[1]{\textrm{#1}}
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+\newcommand{\dff}{\textrm{d}} 
+\newcommand{\dfm}{\textrm{D}}
+\newcommand{\dfp}{\partial}
+\newcommand{\Omgstar}{\Omega^*}
+
+\shorttitle{Planetary Rotation and Seasonality of Clouds}
+\shortauthors{D. A. Williams et al.}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~%
+% START OF DOCUMENT SCRIPT %
+%~~~~~~~~~~~~~~~~~~~~~~~~~~%
+
+\begin{document}
+\begin{CJK*}{UTF8}{gbsn}
+
+\title{Clouds and Seasonality on Terrestrial Planets with Varying Rotation Rates}
+
+\author[0000-0002-5840-2411]{Daniel A. Williams}
+\affiliation{Department of Mathematics and Statistics, Faculty of Environment, Science and Economy, University of Exeter, UK}
+
+\author[0000-0002-1592-7832]{Xuan Ji(纪璇)}
+
+\affiliation{Department of the Geophysical Sciences, University of Chicago, IL, USA}
+
+\author[0000-0002-6417-9316]{Paul Corlies}
+\affiliation{Department of Earth, Atmospheric, and Planetary Sciences, Massachusetts Institute of Technology, Cambridge, MA, USA}
+
+\author[0000-0001-9925-1050]{Juan M. Lora}
+\affiliation{Department of Earth and Planetary Sciences, Yale University, New Haven, CT, USA}
+
+\correspondingauthor{Daniel A. Williams, Juan M. Lora}
+\email{dw569@exeter.ac.uk, juan.lora@yale.edu}
+
+%\accepted{26\textsuperscript{th} December 2023}
+%\submitjournal{Astrophysical Journal}
+
+\begin{abstract}
+Using an idealised climate model incorporating seasonal forcing, we investigate the impact of rotation rate on the abundance of clouds on an Earth-like aquaplanet, and the resulting impacts upon albedo and seasonality. We show that the cloud distribution varies significantly with season, depending strongly on the rotation rate, and is well explained by the large-scale circulation and atmospheric state. Planetary albedo displays non-monotonic behaviour with rotation rate, peaking at around $1/2\Omega_E$. Clouds reduce the surface temperature and total precipitation relative to simulations without clouds at all rotation rates, and reduce the dependence of total precipitation on rotation rate, causing non-monotonic behaviour and a local maximum around $1/8\Omega_E$; these effects are related to the impacts of clouds on the net atmospheric and surface radiative energy budgets. Clouds also affect the seasonality. The influence of clouds on the extent of the winter Hadley cell and the intertropical convergence zone is relatively minor at slow rotation rates ($< 1/8\Omega_E$), but becomes more pronounced at intermediate rotation rates, where clouds decrease their maximum latitudes. The timing of seasonal transitions varies with rotation rate, and the addition of clouds reduces the seasonal phase lag.
+\end{abstract}
+
+\keywords{}
+
+\input{1-introduction}
+\input{2-methods}
+\input{3-results}
+\input{4-discussion}
+
+%%% NOTE TO EDITOR: The acknowledgement environment is producing some strange spacing on overleaf (throwing it to the right column but leaving a huge space on the left). I have forced a better behaviour below based on current revision but feel free to edit it.
+% \begin{acknowledgments}
+\newpage
+We give thanks to the organisers of the Rossbypalooza 2022 Summer School at the University of Chicago, at which the investigation that led to this manuscript started. DAW was supported by an STFC studentship  (ST/V506667/1); this work was partially supported by NASA grant No. 80NSSC21K1718, which is part of the Habitable Worlds program. For the purpose of open access, the author has applied a Creative Commons Attribution (CC BY) licence to any Author Accepted Manuscript version arising. The research data supporting this publication are openly available at \href{https://doi.org/10.5281/zenodo.8075444}{\texttt{doi://10.5281/zenodo.8075444}}.
+
+We thank T.~Komacek for providing the output data from ExoCAM simulations for comparison. We also extend thanks to a number of people who offered constructive comments and ideas during the undertaking of this work, in alphabetical order: D.~Abbot, M.~Battalio, B.~Fan, E.~Kite, N.~Lewis, D.~Sergeev, W.~Seviour, S.~Thomson, G.~Vallis, and A.~Warren. This work was completed in part with resources provided by the University of Chicago Research Computing Center. We finally would like to thank two reviewers for their help in clarifying and improving the paper.
+% \end{acknowledgments}
+
+\software{Isca \citep{vallis2018-Isca},  
+          xarray \citep{hoyer2022-Xarray}, 
+          cartopy \citep{elson2022-SciTools}
+          }
+
+
+\bibliography{rossbypalooza}{}
+\bibliographystyle{aasjournal}
+
+\end{CJK*}
+\end{document}
+
+
+
